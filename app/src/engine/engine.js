@@ -25,20 +25,19 @@ export default class Engine {
 
 	setupScene() {
 		this.scene = new THREE.Scene();
-		this.addCubeToScene(0,0);
-		this.addCubeToScene(2,0);
+		this.addCubeToScene(0,0, 0x00ff00);
+		this.addCubeToScene(2,0, 0xff00f0);
 		
 	}
 
-	addCubeToScene(x, y) {
+	addCubeToScene(x, y, color) {
 		var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-		var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+		var material = new THREE.MeshBasicMaterial( { color: color } );
 		var cube = new THREE.Mesh( geometry, material );
 		this.scene.add( cube );
 		this.objectStore.push(cube);
 		cube.position.x += x;
 		cube.position.y += y;
-
 	}
 
 	render() {
@@ -51,8 +50,8 @@ export default class Engine {
 	animateScene() {
 
 		for (let object of this.objectStore) {
-			object.rotation.x += 0.1;
-			object.rotation.y += 0.1;
+			object.rotation.x += 0.01;
+			object.rotation.y += 0.02;
 		}
 
 	}
