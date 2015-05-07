@@ -3,7 +3,8 @@ module.exports = {
     entry: './app/src/main.js',
     output: {
         path: __dirname,
-        filename: 'app/build/bundle.js'
+        filename: 'app/build/bundle.js',
+        sourceMapFilename: 'app/build/bundle.js'
     },
     module: {
         loaders: [
