@@ -1,0 +1,27 @@
+{
+  "name": "WebGL-Experiment",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wbuchwalter/WebGL-Experiment.git"
+  },
+  "author": "William Buchwalter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wbuchwalter/WebGL-Experiment/issues"
+  },
+  "homepage": "https://github.com/wbuchwalter/WebGL-Experiment",
+  "dependencies": {
+    "three": "^0.71.0",
+    "webpack": "^1.8.11"
+  },
+  "devDependencies": {
+    "babel-core": "^5.2.16",
+    "babel-loader": "^5.0.0"
+  }
+}
